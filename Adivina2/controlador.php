@@ -27,7 +27,8 @@ class JuegoController{
         }
         elseif ($_SESSION['aleatorio']==$this->numero) {
             # code...
-           return $this->numero." ADIVINASTE!";
+            $data='<script>if(confirm("'.$this->numero." ADIVINASTE!".'")) {window.location.replace("../index.php");}</script>';
+           return $data;
         }
         for ($i=0; $i <$_SESSION['I'] ; $i++) { 
             # code...

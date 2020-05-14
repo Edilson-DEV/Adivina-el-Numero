@@ -44,8 +44,8 @@
 		  <p class="mt-5 text-grey text-spacey">
 	<form action="index1.php" method="post">
 		Ingrese el numero:<input type="text" name="txtnumero">
-		<input type="submit" name="btnjugar" value="JUGAR"/>
-		<input type="submit" name="btnnumero" value="NUEVO JUEGO"/>
+    <button type="submit" name="btnjugar"  value="jugar">JUGAR</button>
+		<button type="submit" name="nuevo"  value="restart">NUEVO JUEGO</button>
 		</p>      
         </div>
       </div>
@@ -53,19 +53,21 @@
 </div>  
 
 	</form>
-
-</body>
-</html>
-<?php
-
+  <?php
 include "controlador.php";
 $juego= new JuegoController();
-
-if(isset($_REQUEST['txtnumero'])){
+print_r($_REQUEST);
+if(isset($_REQUEST['btnjugar'])=='jugar'){
     $juego->setNumero(($_REQUEST['txtnumero']));
     echo $juego->StarGame();
   
+}elseif (isset($_REQUEST['nuevo'])=='restart') {
+  session_destroy();
+
+  header("location:../index.php");
 }
 
-
 ?>
+</body>
+</html>
+
