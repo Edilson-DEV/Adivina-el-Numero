@@ -2,8 +2,7 @@
 session_start();
 class Modelo{
     
-			
-    public $contador;
+		
     public $numero;
 
 	//getters

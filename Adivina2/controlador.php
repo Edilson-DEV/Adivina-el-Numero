@@ -19,11 +19,11 @@ class JuegoController{
     {
         if ($_SESSION['aleatorio']<$this->numero) {
             # code...
-            return $this->numero."es alto";
+            return $this->numero." Es alto";
         }
         elseif ($_SESSION['aleatorio']>$this->numero) {
             # code...
-            return $this->numero."es bajo";
+            return $this->numero." Es bajo";
         }
         elseif ($_SESSION['aleatorio']==$this->numero) {
             # code...
@@ -35,10 +35,7 @@ class JuegoController{
             echo $_SESSION['A'][$i][0]."<br>";
         }
     }
-    public function GameEnd()
-    {
 
-    }
 
 }
 
