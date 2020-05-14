@@ -18,8 +18,8 @@ class Modelo{
 
     public function generateRand()
     {
-		// $_SESSION['aleatorio']=rand(1,100);  
-		 $_SESSION['aleatorio']=20;  
+		$_SESSION['aleatorio']=rand(1,100);  
+	
         $this->numero=$_SESSION['aleatorio'];
     }
 }
